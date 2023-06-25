@@ -1,1 +1,135 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equive="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d55b5aef98.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Home Section-->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Photos/logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>The Whole Package</p>
+                <h1>The <span>Rot Consumes,</span><br>Embrace the Deathless King's Blessing, for His Salvation is our Ascension</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--About Section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Photos/aboutPic.PNG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subTitle">Frederik Waechter</h1>
+                    <p>My name is Frederik D. Waechter. I'm currently a first student at UT Twente and have been spending my freshman year picking up new and useful skills in the areas of programming, 3D design, and mechanical engineering.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('proficiencies')">Proficiencies</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <!--Tab Contents for Skills-->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>3D Modelling</span><br>Designing and Creating 3D Models with various Softwares</li>
+                            <li><span>Design Sketching</span><br>Ideating and Furthering high-quality product sketches</li>
+                            <li><span>Mechanical Systems</span><br>Creating and Understanding machines with mechanical properties</li>
+                        </ul>
+                    </div>
+                    <!--Tab Contents for Proficiencies-->
+                    <div class="tab-contents" id="proficiencies">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Proficient with Arduino, Processing, JavaScript | Learning HTML, CSS</li>
+                            <li><span>Bi-Lingual</span><br>Fluent in English and German | Conversational in French, Spanish, Dutch</li>
+                            <li><span>Modelling</span><br>Autodesk Maya, Autodesk Fusion360, Blender, Cloth3D</li>
+                            <li><span>Art</span><br>Ink Painting, Sculpting, Whittling, Sewing and Textile Work</li>
+                        </ul>
+                    </div>
+                    <!--Tab Contents for Education-->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>IB Diploma - 2022</span><br>Graduated with English Lang Lit, Computer Science, and Chemistry as HL</li>
+                            <li><span>Bachelors - 202X</span><br>In the process of obtaining a bachelors in Creative Technology at TU Twente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Portfolio Section-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subTitle">Previous and Current Projects</h1>
+            <div class="workList">
+                <div class="work">
+                    <img src="Photos/Work-1.png">
+                    <div class="layer">
+                        <h3>Zeroth Network Beacon</h3>
+                        <p>A housing unit for an RFID beacon which connects to specific cat collars to monitor movements of cats near areas of interest. The housing unit contains a sliding tray on the inside which is shock protected
+                            by a rigid skeleton. The entire beacon is waterproof when closed, and is difficult to open if you don't know how to use it. Using a rotary gear locking mechanism similar to those found on vault and submarine
+                            doors, the interior is protected from falling out when struck, and creates an almost watertight seal to protect the sensitive electronics inside.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Photos/Work-2.png">
+                    <div class="layer">
+                        <h3>Corset</h3>
+                        <p>The corset is an article of clothing popularized by nobles in previous centuries as a sign of status and class. As out project is focused on over-consumerism, clothing with a deep rooted history of 
+                            wealth and consumption like a corset or cape were the obvious choice for our final piece of art. Creating a pattern for such a unique piece of clothing came with it's challenges, however through
+                            extensive online research I was able to create my own version of it.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Photos/Work-3.jpg">
+                    <div class="layer">
+                        <h3>Auto Hood V.0.3</h3>
+                        <p>This prototype hood system uses a dc motor and pulley system to raise and lower the hood. When a button hidden in the sleeve is pressed, the motor runs and winds in a cord, which increases tension on a 
+                            lever hidden in the side of the hood. As the lever raises, a "crown" at the top which is attached to the inside of the hood raises up, bringing the hood with it. Further iterations will use moisture sensors 
+                            and current weather data to raise and lower the hood, as well as using servos built into the hood itself rather than a pulley system.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function openTab(tabName) {
+            for(tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for(tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+
+</html>
